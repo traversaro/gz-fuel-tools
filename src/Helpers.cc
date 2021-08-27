@@ -31,6 +31,7 @@ std::string ignition::fuel_tools::uriToPath(const common::URI &_uri)
     path = path.substr(1);
   }
   common::changeFromUnixPath(path);
+std::cout << "path: " << path << std::endl;
 
   if (!_uri.Authority())
   {
@@ -42,6 +43,8 @@ std::string ignition::fuel_tools::uriToPath(const common::URI &_uri)
   {
     authority = authority.substr(2);
   }
+std::cout << "authority: " << authority << std::endl;
+
 
   if (authority.empty())
   {
